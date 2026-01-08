@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강남풀싸롱 | 강남야구장 & 매직미러풀싸롱 예약문의</title>
+    <meta name="description"
+        content="강남풀, 강남풀싸롱의 새로운 기준. 강남야구장 및 매직미러풀싸롱 시스템 완비. 역삼동풀싸롱, 삼성동풀싸롱 가격비교 및 견적, 솔직한 풀싸롱후기와 노는법 가이드.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="강남풀싸롱 | 강남야구장 & 매직미러풀싸롱">
+    <meta property="og:description" content="강남풀 최고의 퀄리티와 투명한 풀싸롱가격 정찰제. 역삼동, 삼성동에서 경험하는 최고의 서비스.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts / Icons -->
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <style>
+        /* 
+   Gangnam High-End Landing Page 
+   Design System & Global Styles 
+*/
+
+        :root {
+            /* Colors */
+            --color-primary: #D4AF37;
+            /* Metallic Gold */
+            --color-primary-dark: #B4941F;
+            /* Darker Gold for hover */
+            --color-primary-light: #F4CF57;
+            /* Lighter Gold for highlights */
+            --color-secondary: #1A1A1A;
+            /* Deep Black */
+            --color-bg: #111111;
+            /* Almost Black Background */
+            --color-bg-dark: #0A0A0A;
+            /* Darker sections */
+            --color-text: #FFFFFF;
+            /* White Text */
+            --color-text-muted: #CCCCCC;
+            /* Muted Text */
+            --color-accent: #FF4D4D;
+            /* Soft Red for Callouts */
+            --color-overlay: rgba(0, 0, 0, 0.7);
+
+            /* Spacing */
+            --space-xs: 0.5rem;
+            /* 8px */
+            --space-sm: 1rem;
+            /* 16px */
+            --space-md: 2rem;
+            /* 32px */
+            --space-lg: 4rem;
+            /* 64px */
+            --space-xl: 8rem;
+            /* 128px */
+
+            /* Typography */
+            --font-main: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+
+            /* Layout */
+            --container-width: 1200px;
+            --header-height: 80px;
+
+            /* Effects */
+            --shadow-gold: 0 0 20px rgba(212, 175, 55, 0.2);
+            --glass-bg: rgba(26, 26, 26, 0.8);
+            --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+            --glass-blur: blur(10px);
+        }
+
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Typography Utilities */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--space-sm);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            letter-spacing: -0.01em;
+            color: var(--color-primary);
+        }
+
+        h3 {
+            font-size: 1.75rem;
+        }
+
+        p {
+            color: var(--color-text-muted);
+            margin-bottom: var(--space-sm);
+        }
+
+        .text-gold {
+            color: var(--color-primary);
+        }
+
+        .text-accent {
+            color: var(--color-accent);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--space-sm);
+        }
+
+        .section {
+            padding: var(--space-xl) 0;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .flex-between {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .grid {
+            display: grid;
+            gap: var(--space-md);
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        /* Components */
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            font-weight: 600;
+            font-size: 1.125rem;
+            border-radius: 4px;
+            /* Slightly rounded, crisp luxury feel */
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+            color: #000;
+            box-shadow: var(--shadow-gold);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--color-primary);
+            color: var(--color-primary);
+        }
+
+        .btn-outline:hover {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--color-text);
+        }
+
+        /* Glass Card */
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            border: var(--glass-border);
+            padding: var(--space-md);
+            border-radius: 8px;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--header-height);
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-container {
+            height: 100%;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--color-primary);
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            gap: var(--space-md);
+        }
+
+        .nav-links a {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--color-text-muted);
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--color-primary);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .grid-2,
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            /* Mobile menu implementation later */
+            .section {
+                padding: var(--space-lg) 0;
+            }
+        }
+    </style>
+    <style>
+        /* Price Styles */
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+            color: #fff;
+        }
+
+        .price-table th,
+        .price-table td {
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .price-table th {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--color-primary);
+            font-weight: 600;
+        }
+
+        .price-card {
+            background: var(--glass-bg);
+            border: 1px solid #333;
+            padding: 2rem;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .price-card:hover {
+            border-color: var(--color-primary);
+            transform: translateY(-5px);
+        }
+
+        /* Location Styles */
+        .map-container {
+            width: 100%;
+            height: 400px;
+            background: #222;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            margin-bottom: 2rem;
+            border: 1px solid #333;
+        }
+
+        .step-card {
+            background: var(--glass-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--color-primary);
+            margin-bottom: 1rem;
+        }
+
+        /* FAQ Styles */
+        .faq-item {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #333;
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            padding: 1.5rem 0;
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question:hover {
+            color: var(--color-primary);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        .faq-answer.open {
+            max-height: 300px;
+            padding-bottom: 1.5rem;
+        }
+
+        .icon-plus {
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .faq-question.active .icon-plus {
+            transform: rotate(45deg);
+            color: var(--color-primary);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container flex-between">
+            <a href="/" class="logo">GANGNAM<span class="text-gold">FULL</span></a>
+            <div class="nav-links flex-center">
+                <a href="#home" class="active">홈</a>
+                <a href="#price">가격 안내</a>
+                <a href="#location">위치 안내</a>
+                <a href="#faq">자주 묻는 질문</a>
+                <a href="tel:010-0000-0000" class="btn btn-outline"
+                    style="padding: 0.5rem 1rem; font-size: 0.9rem;">예약문의</a>
+            </div>
+            <!-- Mobile Menu Toggler Placeholder -->
+            <div style="color: white; display: none;" class="mobile-toggler">☰</div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-section"
+        style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1566737236500-c8ac43014a67?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; height: 100vh; display: flex; align-items: center; text-align: center;">
+        <div class="container">
+            <h1 style="margin-bottom: 1.5rem;">강남풀싸롱의 기준을 바꾸다<br><span class="text-gold">강남야구장 & 매직미러풀싸롱 시스템</span></h1>
+            <p
+                style="font-size: 1.25rem; margin-bottom: 3rem; color: #eee; max-width: 700px; margin-left: auto; margin-right: auto;">
+                역삼동/삼성동 풀싸롱 중 최고의 수질(와꾸)과 투명한 가격.<br>
+                강남풀 최고의 서비스로 모시겠습니다.
+                010-8208-0488
+            </p>
+            <div class="flex-center" style="gap: 1.5rem; flex-wrap: wrap;">
+                <a href="tel:010-8208-0488" class="btn btn-primary">풀싸롱견적 실시간 문의</a>
+                <a href="#price" class="btn btn-outline">풀싸롱가격 </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Problem & Solution Section -->
+    <section class="section" style="background: #000;">
+        <div class="container grid-2" style="align-items: center;">
+            <div class="glass-card" style="border-left: 4px solid var(--color-accent);">
+                <h3 class="text-accent" style="margin-bottom: 1rem;">PROBLEM (기존의 문제)</h3>
+                <h2 style="font-size: 2rem; margin-bottom: 1rem;">"매번 달라지는 풀싸롱가격,<br>내상 입는 풀싸롱후기에 지치셨나요?"</h2>
+                <p>불투명한 풀싸롱견적과 사진과 다른 와꾸(사이즈)는<br>즐거운 술자리를 망치는 주범입니다.</p>
+            </div>
+            <div class="glass-card" style="border-left: 4px solid var(--color-primary);">
+                <h3 class="text-gold" style="margin-bottom: 1rem;">SOLUTION (강남풀싸롱의 약속)</h3>
+                <h2 style="font-size: 2rem; margin-bottom: 1rem;">"저희는 100% 정찰제 풀싸롱가격과<br>확실한 초이스를 약속합니다."</h2>
+                <p>투명한 풀싸롱가격비교와 거짓 없는 서비스로<br>최고의 만족을 드립니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 4rem;">
+                <h2 class="text-gold">CORE VALUES</h2>
+                <p>우리가 제공하는 압도적인 가치</p>
+            </div>
+            <div class="grid-3">
+                <div class="glass-card text-center">
+                    <div style="font-size: 3rem; margin-bottom: 1.5rem;">💰</div>
+                    <h3 class="text-gold">투명한 풀싸롱가격</h3>
+                    <p>정직한 풀싸롱견적 오픈.<br>추가금 없는 깔끔한 정찰제.</p>
+                </div>
+                <div class="glass-card text-center">
+                    <div style="font-size: 3rem; margin-bottom: 1.5rem;">👸</div>
+                    <h3>압도적 풀싸롱와꾸</h3>
+                    <p>매직미러풀싸롱 시스템으로 직접 초이스.<br>강남 최고 수질을 자부합니다.</p>
+                </div>
+                <div class="glass-card text-center">
+                    <div style="font-size: 3rem; margin-bottom: 1.5rem;">📍</div>
+                    <h3>역삼동/삼성동 풀싸롱</h3>
+                    <p>강남 전지역 픽업 서비스.<br>접근성 좋은 강남풀 야구장 시스템.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICE Section -->
+    <section id="price" class="section" style="background: #050505;">
+        <div class="container">
+            <header class="text-center" style="margin-bottom: 4rem;">
+                <h2 class="text-gold" style="font-size: 2.5rem;">PRICE & SYSTEM</h2>
+                <p>클래스가 다른 서비스, 합리적인 투명 정찰제</p>
+            </header>
+
+            <h2 class="text-center" style="margin-bottom: 3rem;">주류 및 세트 구성</h2>
+
+            <div class="grid-2">
+                <!-- Basic Set -->
+                <div class="price-card">
+                    <h3 class="text-gold">BASIC SET</h3>
+                    <p>가볍게 즐기는 비즈니스 코스</p>
+                    <div style="font-size: 2.5rem; font-weight: 700; margin: 1.5rem 0;">₩ 400,000~</div>
+                    <div style="font-size: 2.5rem; font-weight: 700; margin: 1.5rem 0;">테이블 1시간 + 케어40분</div>
+                    <ul style="text-align: left; margin-bottom: 2rem; color: #ccc;">
+                        <li>✔️ 위스키 12년산 1Bottle</li>
+                        <li>✔️ 제철 과일 안주 & 마른안주</li>
+                        <li>✔️ 맥주/음료 무제한</li>
+                        <li>✔️ 담당 매니저 케어 서비스</li>
+                        <li>✔️ 1인 방문시 5만원추가</li>
+                    </ul>
+                    <a href="tel:010-8208-0488" class="btn btn-primary" style="width: 100%;">예약하기</a>
+                </div>
+
+                <!-- VIP Set -->
+                <div class="price-card"
+                    style="border-color: var(--color-primary); box-shadow: 0 0 20px rgba(212,175,55,0.1);">
+                    <h3 class="text-gold">VIP 세트</h3>
+                    <p>최고의 접대를 위한 프리미엄 코스</p>
+                    <div style="font-size: 2.5rem; font-weight: 700; margin: 1.5rem 0;">₩ 500,000~</div>
+                    <div style="font-size: 2.5rem; font-weight: 700; margin: 1.5rem 0;">테이블 1시간30분 + 케어40분</div>
+                    <ul style="text-align: left; margin-bottom: 2rem; color: #ccc;">
+                        <li>✔️ 위스키 12년산 1Bottle</li>
+                        <li>✔️ 제철 과일 안주 & 마른안주</li>
+                        <li>✔️ 맥주/음료 무제한</li>
+                        <li>✔️ 담당 매니저 케어 서비스</li>
+                        <li>✔️ 1인 방문시 5만원추가</li>
+                    </ul>
+                    <a href="tel:010-8208-0488" class="btn btn-primary" style="width: 100%;">예약하기</a>
+                </div>
+            </div>
+
+            <div
+                style="margin-top: 4rem; padding: 2rem; background: rgba(255,50,50,0.1); border: 1px solid var(--color-accent); border-radius: 8px;">
+                <h3 class="text-accent">🚨 투명 정찰제</h3>
+                <p>강남풀싸롱은 메뉴판에 명시된 가격 외에 부당한 추가 요금을 절대 요구하지 않습니다.</p>
+                <p style="margin-top: 1rem;">* 웨이터 봉사료(W/T) 및 룸 차지(R/C)는 별도이며, 예약 시 정확히 안내해 드립니다.<br>* 카드 결제 시 부가세 15%가
+                    별도 부과됩니다.</p>
+            </div>
+
+            <div class="text-center" style="margin-top: 4rem;">
+                <h2>단체 및 멤버십 문의</h2>
+                <p>법인 카드 결제 가능 / 세금계산서 발행 가능</p>
+                <a href="tel:010-8208-0488" class="btn btn-outline" style="margin-top: 1rem;">오늘의 정확한 견적 문의하기</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION Section -->
+    <section id="location" class="section">
+        <header class="text-center" style="margin-bottom: 4rem;">
+            <h2 class="text-gold" style="font-size: 2.5rem;">LOCATION & RESERVATION</h2>
+            <p>당신과 가장 가까운 프리미엄, 찾아오시는 길</p>
+        </header>
+
+        <div class="container grid-2">
+            <div>
+                <h3 class="text-gold" style="margin-bottom: 1.5rem;">LOCATION (오시는 길)</h3>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.250567789065!2d127.02763631531006!3d37.50000007981329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca159f8c47b5f%3A0x6b2b2361ac1c8b72!2z6rCV64Ko!5e0!3m2!1sko!2skr!4v1640000000000!5m2!1sko!2skr"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 0.5rem;">📍 주소</h4>
+                    <p style="color: #fff; margin-bottom: 1.5rem;">서울특별시 강남구 테헤란로 123 (역삼동)</p>
+
+                    <h4 style="margin-bottom: 0.5rem;">🚗 주차 안내</h4>
+                    <p style="color: #fff; margin-bottom: 1.5rem;">건물 입구에서 발렛 파킹 서비스 이용 가능 (발렛비 별도)</p>
+
+                    <h4 style="margin-bottom: 0.5rem;">🚇 대중교통</h4>
+                    <p style="color: #fff;">역삼역 1번 출구 도보 3분 거리</p>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-gold" style="margin-bottom: 1.5rem;">예약 절차 (Reservation Progress)</h3>
+                <div class="step-card">
+                    <h4 class="text-gold">Step 1. 문의</h4>
+                    <p>전화 또는 카카오톡으로 인원, 방문 시간, 선호스타일을 알려주세요.</p>
+                </div>
+                <div class="step-card">
+                    <h4 class="text-gold">Step 2. 견적 확인</h4>
+                    <p>담당 매니저가 투명한 정찰제 가격표를 기반으로 정확한 견적을 안내해 드립니다.</p>
+                </div>
+                <div class="step-card">
+                    <h4 class="text-gold">Step 3. 예약 확정 및 방문</h4>
+                    <p>예약금 확인 후 룸이 배정됩니다. 도착 시 담당 서비스팀이 에스코트해 드립니다.</p>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <a href="tel:010-8208-0488" class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">전화 예약
+                        하기</a>
+                    <button class="btn btn-outline" style="width: 100%;">위치 문자 전송받기</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section" style="background: #050505;">
+        <header class="text-center" style="margin-bottom: 4rem;">
+            <h2 class="text-gold" style="font-size: 2.5rem;">FAQ</h2>
+            <p>궁금한 모든 것, 명쾌하게 답변해 드립니다</p>
+        </header>
+
+        <div class="container" style="max-width: 800px;">
+            <div class="faq-item">
+                <button class="faq-question">
+                    Q. 처음 방문하는데 혼자 가도 되나요?
+                    <span class="icon-plus">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>A. 네, 물론입니다. 혼자 방문하셔도 편안하게 즐기실 수 있도록 1인 고객 전용 케어 서비스를 제공하고 있습니다. 프라이빗한 룸에서 부담 없이 시간을 보내실 수 있습니다.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Q. 복장 규정(Dress Code)이 있나요?
+                    <span class="icon-plus">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>A. 특별히 드레스 코드는 없습니다..</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Q. 영업 시간은 어떻게 되나요?
+                    <span class="icon-plus">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>A. 연중무휴로 운영되며, 오후 6시부터 다음날 오전 6시까지 영업합니다. 늦은 시간 방문 시 미리 연락 주시면 대기 없이 입장 가능하도록 도와드리겠습니다.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Q. 원하는 시간에 예약이 가능한가요?
+                    <span class="icon-plus">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>A. 저희는 예약제가 아닌 순번재로 오시는 순서대로 진행이 됩니다. 그렇기 때문에 바쁜 시간대에는 대기 시간이 있을수 있는 점 참고 하시기 바랍니다.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Q. 매니져 사이즈는 어떤가요?
+                    <span class="icon-plus">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>A. 가격대비 퀄리티를 먼저 생각해주시기 바랍니다. 나이가 어리고 예쁘고 마인드까지 좋은 매니져 눈 씻고 찾아봐고 풀싸롱에는 없습니다.오셔서 보시고 마음에 드는 매니져가
+                        없다면 편하게 일어나셔도 괜찮습니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #050505; padding: 4rem 0; border-top: 1px solid #222;">
+        <div class="container grid-3">
+            <div>
+                <div class="logo" style="margin-bottom: 1rem;">GANGNAM<span class="text-gold">FULL</span></div>
+                <p style="font-size: 0.9rem;">강남 1등 강남풀싸롱 / 매직미러풀싸롱.<br>제대로 된 풀싸롱노는법을 안내합니다.</p>
+            </div>
+            <div>
+                <h4 style="color: white; margin-bottom: 1rem;">문의하기</h4>
+                <p>Tel: 010-8208-0488</p>
+                <p>Kakao: gangnam_high</p>
+                <p>Location: 서울특별시 강남구 테헤란로 123</p>
+            </div>
+            <div>
+                <h4 style="color: white; margin-bottom: 1rem;">바로가기</h4>
+                <ul style="font-size: 0.9rem; color: var(--color-text-muted);">
+                    <li style="margin-bottom: 0.5rem;"><a href="#price">가격 안내</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="#location">위치 안내</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container text-center" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #111;">
+            <p style="font-size: 0.8rem;">&copy; 2024 Gangnam Full Salon. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const isOpen = answer.classList.contains('open');
+
+                // Close all others
+                document.querySelectorAll('.faq-answer').forEach(item => {
+                    item.classList.remove('open');
+                });
+                document.querySelectorAll('.faq-question').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+
+                if (!isOpen) {
+                    answer.classList.add('open');
+                    button.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
